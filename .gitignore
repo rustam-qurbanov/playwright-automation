@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+.venv/
+
+# Environment
+.env
+
+# Pytest
+.pytest_cache/
+
+# Artifacts
+artifacts/screenshots/*
+artifacts/videos/*
+artifacts/traces/*
+!artifacts/screenshots/.gitkeep
+!artifacts/videos/.gitkeep
+!artifacts/traces/.gitkeep
+
+# IDEs
+.idea/
+.vscode/
