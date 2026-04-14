@@ -1,15 +1,17 @@
-import os
 import json
+import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
-# Load variables from .env
 load_dotenv()
 
 ENV = os.getenv("ENV", "local")
-config_path = Path(__file__).parent / "environments" / f"{ENV}.json"
+_config_path = Path(__file__).parent / "environments" / f"{ENV}.json"
 
-with open(config_path, "r") as f:
-    config = json.load(f)
+with open(_config_path) as f:
+    _config = json.load(f)
 
-BASE_URL = config.get("BASE_URL", "https://www.saucedemo.com")
+BASE_URL: str = _config["BASE_URL"]
+TIMEOUT: int = _config.get("TIMEOUT", 30000)
+BROWSER: str = _config.get("BROWSER", "chromium")

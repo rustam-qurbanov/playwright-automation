@@ -2,24 +2,43 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Virtual environments
 env/
 venv/
 .venv/
+.python-version
 
 # Environment
 .env
+.env.*
+!.env.example
 
 # Pytest
 .pytest_cache/
+.pytest_tmp/
+.coverage
+htmlcov/
+
+# Ruff
+.ruff_cache/
 
 # Artifacts
-artifacts/screenshots/*
-artifacts/videos/*
-artifacts/traces/*
-!artifacts/screenshots/.gitkeep
-!artifacts/videos/.gitkeep
-!artifacts/traces/.gitkeep
+artifacts/*
+!artifacts/**/.gitkeep
+
+# Logs
+*.log
+
+# Playwright
+playwright-report/
+
+# macOS
+.DS_Store
 
 # IDEs
 .idea/
 .vscode/
+
+# Claude Code internals
+.claude/
