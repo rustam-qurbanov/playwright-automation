@@ -19,3 +19,7 @@ class InventoryPage(BasePage):
 
     def is_loaded(self) -> bool:
         return self.is_visible(self._inventory_list)
+
+    def add_first_item_to_cart(self) -> None:
+        add_btn = self.page.locator("button:has-text('Add to cart')").first
+        self.click(add_btn)

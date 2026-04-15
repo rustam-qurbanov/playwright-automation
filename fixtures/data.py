@@ -7,5 +7,5 @@ import pytest
 def auth_data() -> dict:
     return {
         "username": os.getenv("TEST_USER", "standard_user"),
-        "password": os.getenv("TEST_PASSWORD", ""),
+        "password": os.getenv("TEST_PASSWORD", "secret_sauce"),
     }

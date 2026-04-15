@@ -3,6 +3,19 @@
 > Production-ready UI/API test automation framework built with Python, Pytest, and Playwright.
 > Designed with a strict focus on scalability, clean architecture, and test stability.
 
+---
+
+## 🎯 Why This Framework & Philosophy
+
+This framework is designed to:
+* Eliminate flaky tests by relying entirely on Playwright's auto-waiting.
+* Enforce clean separation of concerns between tests, flows, pages, and fixtures.
+* Ensure tests read like user behavior, not implementation details.
+* Support fast execution through API-based setups.
+* Provide a scalable architecture that grows from simple scenarios to full enterprise regression coverage.
+
+---
+
 ## 🌟 Key Features
 
 * **Strict Architecture:** Strict separation of tests, flows, and page objects.
@@ -10,6 +23,21 @@
 * **High Stability:** Complete reliance on Playwright's auto-waiting. No `time.sleep()`.
 * **API + UI:** Support for dual-layer testing (handling setups via API to speed up UI tests).
 * **Code Quality:** Formatted and linted strictly via `ruff`, `black` and `pre-commit`.
+
+---
+
+## 🧾 Example Test
+
+Tests inside this framework are incredibly readable and focus purely on business logic:
+
+```python
+def test_user_can_checkout_item(auth_flow, cart_flow, inventory_page):
+    auth_flow.login_as_standard_user()
+    inventory_page.add_random_item_to_cart()
+    cart_flow.complete_checkout()
+
+    assert inventory_page.is_checkout_successful()
+```
 
 ---
 
@@ -112,6 +140,8 @@ poetry run pytest --html=report.html
 3. **No Locators in Tests:** Selectors and locators stay in `app/pages` and `app/components`.
 4. **Deterministic Waits:** Never use `time.sleep()`. Rely on Playwright's web-first assertions and auto-waiting.
 
+---
+
 ## 🧑‍💻 Code Quality
 
 This project enforces strict code quality formatting.
@@ -125,3 +155,17 @@ poetry run ruff check .
 poetry run ruff format .
 # or if using black: poetry run black .
 ```
+
+---
+
+## 📌 Scope & Future Roadmap
+
+**Current Scope:**
+- UI automation (Playwright)
+- API-assisted test setup
+- Scalable AQA architecture
+
+**Future Integrations:**
+- Appium (Mobile Automation)
+- CI/CD Pipelines (GitHub Actions / GitLab CI)
+- Advanced visual reporting (Allure)
