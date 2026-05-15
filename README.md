@@ -2,6 +2,8 @@
 
 > Production-ready UI/API test automation framework built with Python, Pytest, and Playwright.
 > Designed with a strict focus on scalability, clean architecture, and test stability.
+>
+> **Target Application:** [Sauce Demo (Swag Labs)](https://www.saucedemo.com/)
 
 ---
 

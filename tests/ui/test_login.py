@@ -6,6 +6,7 @@ from config.settings import BASE_URL
 @pytest.mark.smoke
 @pytest.mark.ui
 def test_successful_login(auth_flow, auth_data):
+    """Test ID: [AUTH-01]"""
     inventory_page = auth_flow.login_as(
         BASE_URL, auth_data["username"], auth_data["password"]
     )
@@ -17,6 +18,7 @@ def test_successful_login(auth_flow, auth_data):
 @pytest.mark.smoke
 @pytest.mark.ui
 def test_invalid_login_shows_error(login_page):
+    """Test ID: [AUTH-02]"""
     login_page.load(BASE_URL)
     login_page.login("invalid_user", "wrong_password")
 
