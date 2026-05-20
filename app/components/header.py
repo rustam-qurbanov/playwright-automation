@@ -9,12 +9,16 @@ class HeaderComponent(BaseComponent):
         self._cart_link = page.locator(".shopping_cart_link")
         self._cart_badge = page.locator(".shopping_cart_badge")
         self._burger_menu_btn = page.locator("#react-burger-menu-btn")
+        self._logout_link = page.locator("#logout_sidebar_link")
 
     def open_cart(self) -> None:
         self.click(self._cart_link)
 
     def open_menu(self) -> None:
         self.click(self._burger_menu_btn)
+
+    def click_logout(self) -> None:
+        self.click(self._logout_link)
 
     def get_cart_count(self) -> str:
         return self.get_text(self._cart_badge)

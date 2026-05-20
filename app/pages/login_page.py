@@ -25,3 +25,6 @@ class LoginPage(BasePage):
 
     def is_error_visible(self) -> bool:
         return self.is_visible(self._error_message)
+
+    def is_loaded(self) -> bool:
+        return self.is_visible(self._login_button)

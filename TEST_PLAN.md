@@ -10,7 +10,9 @@ This document outlines the comprehensive test plan for the Sauce Demo UI automat
 * **INV-** (Inventory) — витрина товаров и сортировка
 * **SYS-** (System) — системные проверки (бургер-меню, футер)
 
-> **📊 Automation Status:** 5 / 17 scenarios automated (~29%)
+> **📊 Automation Status:** 8 / 17 scenarios automated (~47%)
+
+-----------------------------------------------
 
 ## 🔴 Priority 1: Critical Core Flows (Smoke)
 These tests verify that the fundamental purpose of the application works. If these fail, the application is fundamentally broken.
@@ -22,9 +24,9 @@ These tests verify that the fundamental purpose of the application works. If the
 Tests validating access control and session management.
 
 - [x] **[AUTH-02] Invalid Credentials:** User sees an error when logging in with incorrect username/password.
-- [ ] **[AUTH-03] Locked Out User:** User sees a specific "locked out" error when logging in with `locked_out_user`.
-- [ ] **[AUTH-04] Logout Flow:** Logged-in user can successfully log out via the burger menu and is redirected to the login page.
-- [ ] **[AUTH-05] Protected Routes:** User cannot access the `/inventory.html` page directly without logging in first.
+- [x] **[AUTH-03] Locked Out User:** User sees a specific "locked out" error when logging in with `locked_out_user`.
+- [x] **[AUTH-04] Logout Flow:** Logged-in user can successfully log out via the burger menu and is redirected to the login page.
+- [x] **[AUTH-05] Protected Routes:** User cannot access the `/inventory.html` page directly without logging in first.
 
 ## 🟡 Priority 3: Cart Logic & State Management
 Tests validating the core shopping cart mechanics.

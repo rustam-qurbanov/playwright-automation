@@ -10,6 +10,9 @@ class InventoryPage(BasePage):
         self._inventory_list = page.locator(".inventory_list")
         self._inventory_items = page.locator(".inventory_item")
 
+    def load(self, base_url: str) -> None:
+        self.open(f"{base_url}/inventory.html")
+
     def get_title(self) -> str:
         self.wait_for(self._title)
         return self.get_text(self._title)
