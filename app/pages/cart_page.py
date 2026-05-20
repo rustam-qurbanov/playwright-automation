@@ -13,3 +13,7 @@ class CartPage(BasePage):
 
     def get_items_in_cart(self) -> int:
         return self._cart_items.count()
+
+    def remove_item_by_index(self, index: int) -> None:
+        remove_btn = self.page.locator("button:has-text('Remove')").nth(index)
+        self.click(remove_btn)

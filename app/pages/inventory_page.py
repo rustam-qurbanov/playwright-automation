@@ -26,3 +26,11 @@ class InventoryPage(BasePage):
     def add_first_item_to_cart(self) -> None:
         add_btn = self.page.locator("button:has-text('Add to cart')").first
         self.click(add_btn)
+
+    def add_item_by_index(self, index: int) -> None:
+        add_btn = self.page.locator("button:has-text('Add to cart')").nth(index)
+        self.click(add_btn)
+
+    def remove_item_by_index(self, index: int) -> None:
+        remove_btn = self.page.locator("button:has-text('Remove')").nth(index)
+        self.click(remove_btn)

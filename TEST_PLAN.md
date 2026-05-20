@@ -10,7 +10,7 @@ This document outlines the comprehensive test plan for the Sauce Demo UI automat
 * **INV-** (Inventory) — витрина товаров и сортировка
 * **SYS-** (System) — системные проверки (бургер-меню, футер)
 
-> **📊 Automation Status:** 8 / 17 scenarios automated (~47%)
+> **📊 Automation Status:** 12 / 17 scenarios automated (~70%)
 
 -----------------------------------------------
 
@@ -32,10 +32,10 @@ Tests validating access control and session management.
 Tests validating the core shopping cart mechanics.
 
 - [x] **[CART-01] Cart Badge Update:** Adding an item updates the cart badge counter to 1.
-- [ ] **[CART-02] Add Multiple Items:** Adding multiple different items updates the cart badge and cart page list correctly.
-- [ ] **[CART-03] Remove from Inventory:** User can remove an added item directly from the Inventory page (button changes from Add to Remove).
-- [ ] **[CART-04] Remove from Cart:** User can remove an item from the Cart page, and the cart becomes empty.
-- [ ] **[CART-05] State Persistence:** Cart items persist even if the user refreshes the page (simulating real browser usage).
+- [x] **[CART-02] Add Multiple Items:** Adding multiple different items updates the cart badge and cart page list correctly.
+- [x] **[CART-03] Remove from Inventory:** User can remove an added item directly from the Inventory page (button changes from Add to Remove).
+- [x] **[CART-04] Remove from Cart:** User can remove an item from the Cart page, and the cart becomes empty.
+- [x] **[CART-05] State Persistence:** Cart items persist even if the user refreshes the page (simulating real browser usage).
 
 ## 🔵 Priority 4: Checkout Validations & Calculations
 Tests validating form logic, mathematical calculations, and edge cases in the checkout process.
